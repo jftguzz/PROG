@@ -1,0 +1,60 @@
+#include<stdio.h>
+#include<string.h>
+
+typedef struct{
+   char nome[30];
+   float cr;
+}aluno;
+
+int main(){
+   int i, j;
+   aluno a[5];
+   aluno aux;
+
+   for(i=0;i<5;i++){
+        setbuf(stdin,NULL);
+        fgets(a[i].nome,30,stdin);
+        do{
+            scanf("%f",&a[i].cr);
+        }while(a[i].cr<0 || a[i].cr>1);
+   }
+
+   for(i=0; i<4; i++){
+        for(j=i+1; j<5; j++){
+            if(a[i].cr < a[j].cr){
+                aux = a[i];
+                a[i] = a[j];
+                a[j] = aux;
+            }
+        }
+   }
+
+   for(i=0;i<5;i++){
+      printf("%s%.2f\n",a[i].nome,a[i].cr);
+   }
+
+   return 0;
+}
+
+/*
+aluno aux;
+int j;
+// lendo os dados do teclado (stdin)
+for(i=0;i<5;i++){
+    setbuf(stdin,NULL);
+    fgets(a[i].nome,30,stdin);
+    do{
+        scanf("%f\n",&a[i].cr);
+    }while(a[i].cr<0||a[i].cr>1);
+}
+
+// ordenando em ordem decrescente de CR
+for(i=0;i<4;i++){
+    for(j=i+1;j<5;j++){
+        if(a[i].cr<a[j].cr){
+            aux = a[i];
+            a[i] = a[j];
+            a[j] = aux;
+        }
+    }
+}
