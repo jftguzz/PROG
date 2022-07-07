@@ -1,0 +1,9 @@
+typedef struct{
+    char nome[30];
+    int idade;
+}pessoa;
+
+void imprimeDados(pessoa *p){
+    printf("%s\n", ((*p).nome));
+    printf("%d\n", ((*p).idade));
+}
