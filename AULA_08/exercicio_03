@@ -1,0 +1,14 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <ctype.h>
+
+int encontraZero(   ){
+    int contador_de_quantidade = 0, numero_lido;
+
+    do{
+        scanf("%d", &numero_lido);
+        contador_de_quantidade++;
+    }while(numero_lido!=0);
+
+    return contador_de_quantidade-1;
+}
