@@ -1,0 +1,57 @@
+#include<stdio.h>
+
+int main ()
+{
+    int vet[10];
+    int numero_a_ser_impresso_x, repeticoes_a_imprimir_y, numero_para_preencher_z;
+    int indice;
+
+    scanf("%d", &numero_a_ser_impresso_x);
+
+    do{
+        scanf("%d", &repeticoes_a_imprimir_y);
+    } while(repeticoes_a_imprimir_y > 10 ||repeticoes_a_imprimir_y <= 0);
+
+    scanf("%d", &numero_para_preencher_z);
+
+    for (indice = 0; indice < repeticoes_a_imprimir_y; indice++){
+        vet[indice] = numero_a_ser_impresso_x;
+    }
+
+    for (indice = repeticoes_a_imprimir_y; indice < 10; indice++){
+        vet[indice] = numero_para_preencher_z;
+    }
+
+    for (indice = 0; indice < 10; indice++){
+        printf("%d ", vet[indice]);
+    }
+
+    return 0;
+}
+
+
+
+/*
+
+#include "stdio.h"
+
+int main(){
+    int v[10],x,y,z,i;
+    scanf("%d",&x);
+    do{
+        scanf("%d",&y);
+    }while(y<0 || y>10);
+    scanf("%d",&z);
+    for(i=0;i<10;i++){
+        if(i<y)
+            v[i] = x;
+        else
+            v[i] = z;
+    }
+    for(i=0;i<10;i++)
+        printf("%d ",v[i]);
+    return 0;
+}
+
+
+
