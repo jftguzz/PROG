@@ -1,0 +1,29 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <ctype.h>
+
+typedef struct {
+    char nome[30];
+    int idade;
+}pessoa;
+
+void imprimeDados (pessoa p){
+    printf("Nome: %s", p.nome);
+    printf("Idade: %d\n", p.idade);
+
+}
+
+pessoa leDados(){
+    pessoa p;
+    printf("Nome: ");
+    setbuf(stdin, NULL);
+    fgets(p.nome,30,stdin);
+    printf("Idade: ");
+    scanf("%d", &p.idade);
+}
+
+int main{
+    pessoa p = leDados();
+    imprimeDados(p);
+    return 0;
+}
