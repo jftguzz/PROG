@@ -1,0 +1,53 @@
+#include<stdio.h>
+#include<string.h>
+
+int main(){
+
+    char str[31];
+    int contaDigito = 0, contador = 0;
+    int maior_contagem = 0;
+    int tamanho = 0;
+
+    fgets(str,31,stdin);
+    tamanho = strlen(str);
+
+    for(contador=0; contador<tamanho; contador++){
+        contaDigito = 0;
+    while((contador<tamanho) && (str[contador] == '1')){
+       contaDigito++;
+       contador++;
+
+        } if (contaDigito > maior_contagem)
+            maior_contagem = contaDigito;
+    }
+
+    printf("%d",maior_contagem);
+    return 0;
+}
+
+/*
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    int i = 0;
+    char s[31];
+    int ct = 0; // conta um sequencia consecutiva de 1's
+    int ctmaior = 0; // maior sequencia consecutiva de 1's
+    int n = 0; // tamanho da cadeia
+
+    fgets(s,31,stdin); // recebe a string do teclado, limitada a 30 carac.
+    n = strlen(s);
+
+    for (i = 0 ; i < n ; i++){
+        ct = 0;
+        while ((i < n) && (s[i] == '1')) {
+            ct = ct + 1;
+            i = i + 1;
+        }
+        if (ct > ctmaior)
+            ctmaior = ct;
+    }
+    printf("%d\n", ctmaior);
+    return 0;
+}
