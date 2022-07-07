@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <ctype.h>
+
+int calcNumQuadrados (int n){
+
+    int numero_quadrados = 0;
+    int quantidade_graos = 1;
+    int acumulo = 0;
+
+    while(acumulo < n && numero_quadrados < 64){
+        acumulo += quantidade_graos;
+        numero_quadrados++;
+        quantidade_graos = 2*quantidade_graos;
+
+    }
+    return numero_quadrados;
+}
