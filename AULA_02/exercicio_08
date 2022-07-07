@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main (){
+    int numero, centena, dezena, unidade;
+        scanf("%i", &numero);
+
+            centena = numero/100%10;
+            dezena = numero/10%10;
+            unidade = numero/1%10;
+
+        printf("%d\n%d\n%d\n", centena, dezena, unidade);
+
+    return 0;
+}
