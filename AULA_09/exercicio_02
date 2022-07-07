@@ -1,0 +1,3 @@
+void areaquadrado(int lado, int *area){
+    *area = lado * lado;
+}
