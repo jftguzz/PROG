@@ -1,0 +1,42 @@
+#include<stdio.h>
+
+int main ()
+{
+    int vet[5], ultimo_alocacao_do_vetor = 4, copia_um_no_outro;
+    int indice;
+
+    for (indice=0; indice<5; indice++){
+        scanf("%d", &vet[indice]);
+    }
+    for (indice=0; indice<2; indice++){
+        copia_um_no_outro = vet[indice];
+        vet[indice] = vet[ultimo_alocacao_do_vetor];
+        vet[ultimo_alocacao_do_vetor] = copia_um_no_outro;
+        ultimo_alocacao_do_vetor --;
+    }
+    for (indice=0; indice<5; indice++){
+        printf("%d ", vet[indice]);
+    }
+
+    return 0;
+}
+
+
+
+/*#include<stdio.h>
+
+int main ()
+{
+    int i;
+    char vetor[5];
+
+    for(i=0; i<5; i++){
+        scanf("%c", &vetor[i]);
+    }
+    for(i=4; i>=0; i--){
+        printf("%c", vetor[i]);
+    }
+
+    return 0;
+}
+*/
