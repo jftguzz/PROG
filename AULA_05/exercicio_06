@@ -1,0 +1,92 @@
+#include<stdio.h>
+#include <stdlib.h>
+
+int main ()
+{
+    int indice;
+    int vetor[5], vetor_decrescente[5];
+    int pares_atuais, copia_um_no_outro;
+
+    for(indice = 0; indice < 5; indice ++){
+        scanf("%d\n", &vetor[indice]);
+        printf("%d ", vetor[indice]);
+    }
+
+    printf("\n");
+
+    for (indice = 0; indice < 5; indice ++){
+       vetor_decrescente[indice] = vetor[indice];
+    }
+
+    while (pares_atuais <4){
+
+        pares_atuais = 0;
+
+        for(indice = 1; indice < 5; indice ++){
+
+            if (vetor_decrescente[indice] <= vetor_decrescente[indice -1]){
+                pares_atuais ++;
+            }
+            else {
+                copia_um_no_outro = vetor_decrescente[indice];
+                vetor_decrescente[indice] = vetor_decrescente[indice - 1];
+                vetor_decrescente[indice - 1] = copia_um_no_outro;
+            }
+        }
+    }
+
+    for(indice = 0; indice < 5; indice ++){
+        printf("%d ", vetor_decrescente[indice]);
+    }
+
+    printf("\n");
+
+    for (indice = 0; indice < 5; indice ++){
+         printf("%d ", vetor_decrescente[indice] + vetor[indice]);
+    }
+
+    return 0;
+}
+
+/*
+#include <stdio.h>
+#define N 5
+
+int main()
+{
+   int original[N],ordenado[N];
+   int i,j,aux;
+   for(i=0;i<N;i++)
+   {
+       scanf("%d",&original[i]);
+       ordenado[i]=original[i];
+   }
+   for(i=0;i<N;i++)
+   {
+       for(j=i;j<N;j++)
+       {
+           if(ordenado[j]>ordenado[i])
+           {
+              aux=ordenado[i];
+              ordenado[i]=ordenado[j];
+              ordenado[j]=aux;
+           }
+
+       }
+   }
+   for(i=0;i<N;i++)
+   {
+       printf("%d ",original[i]);
+   }
+   printf("\n");
+   for(i=0;i<N;i++)
+   {
+       printf("%d ",ordenado[i]);
+   }
+    printf("\n");
+   for(i=0;i<N;i++)
+   {
+       printf("%d ",original[i]+ordenado[i]);
+   }
+    return 0;
+}
