@@ -1,0 +1,11 @@
+char *findFirstDigit(char *s){
+    char *firstDigit = NULL;
+    int i = 0;
+    while(s[i] != '\0' && firstDigit == NULL){
+        if(s[i] >= '0' && s[i] <= '9'){
+            firstDigit = &s[i];
+        }
+        i++;
+    }
+    return firstDigit;
+}
