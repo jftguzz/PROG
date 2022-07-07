@@ -1,0 +1,12 @@
+void troca(int* a, int *b){
+    int aux;
+    aux = *a;
+    *a  = *b;
+    *b = aux;
+}
+
+void ordena3(int* i, int* j, int* k){
+    if(*i>*j) troca(i,j);
+    if(*j>*k) troca(j,k);
+    if(*i>*j) troca(i,j);
+}
