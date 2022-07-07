@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main (){
+    int VALOR_TEMPERATURA;
+    printf("Digite a temperatura: ");
+    scanf("%d", &VALOR_TEMPERATURA);
+
+    if (VALOR_TEMPERATURA<0)
+        printf("CONGELANTE");
+    else if (VALOR_TEMPERATURA<=9)
+        printf("MUITO FRIO");
+    else if (VALOR_TEMPERATURA<=19)
+        printf("FRIO");
+    else if (VALOR_TEMPERATURA<=29)
+        printf("NORMAL");
+    else if (VALOR_TEMPERATURA<=39)
+        printf("QUENTE");
+    else if (VALOR_TEMPERATURA>=40)
+        printf("MUITO QUENTE");
+    return 0;
+}
