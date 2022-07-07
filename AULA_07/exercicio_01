@@ -1,0 +1,50 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <ctype.h>
+
+struct cadastro{
+        char nome[50], rua[50];
+        int idade, numero;
+    };
+
+int main(){
+
+    struct cadastro c[5];
+    int i;
+
+    for(i=0; i<5; i++){
+        setbuf(stdin, NULL);
+        fgets(c[i].nome,50,stdin);
+        scanf("%d", &c[i].idade);
+
+        setbuf(stdin, NULL);
+        fgets(c[i].rua,50,stdin);
+        scanf("%d", &c[i].numero);
+    }
+
+
+    printf("Nome: %s\nIdade: %d\nRua: %s\nNumero: %d\n", c[i].nome, c[i].idade, c[i].rua, c[i].numero);
+
+   return 0;
+}
+
+/*
+#include<stdio.h>
+#include<stdlib.h>
+
+struct data{
+    int dia, ano, mes;
+};
+
+struct aluno{
+    char nome[50];
+    struct data nascimento;
+};
+
+int main( ){
+    struct aluno alunos[5];
+    alunos[2].nascimento.ano=1992;
+    return 0;
+}
+
