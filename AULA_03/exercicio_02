@@ -1,0 +1,16 @@
+#include<stdio.h>
+
+int main(){
+    int peso, dosagem;
+
+    scanf("%d", &peso);
+
+    if (peso<40)
+        peso=dosagem;
+        printf("%d", dosagem);
+    if (peso>=40)
+        dosagem=40;
+        printf("%d", dosagem);
+
+    return 0;
+}
