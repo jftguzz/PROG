@@ -1,0 +1,42 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+int main(){
+    int numero=1, Menor = 0;
+    int ver=0;
+
+    scanf("%d", &numero);
+    Menor = numero;
+
+    while (numero!=0){
+        scanf("%d", &numero);
+
+        if (numero<Menor && numero!=0){
+            Menor = numero;
+        }ver=1;
+    }
+
+    if (ver==1)
+        printf("Menor = %d", Menor);
+
+    return 0;
+}
+
+/*
+#include<stdio.h>
+#include<stdlib.h>
+
+int main(){
+    int num, menor, n=0;
+    scanf("%d",&num);
+    menor = num;
+    while(num!=0){
+        scanf("%d",&num);
+        if(num<menor && num!=0)
+            menor = num;
+        n++;
+    }
+    if(n>0)
+        printf("Menor = %d\n",menor);
+    return 0;
+}
