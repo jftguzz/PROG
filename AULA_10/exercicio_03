@@ -1,0 +1,16 @@
+typedef struct{
+    char nome[30];
+    int idade;
+}pessoa;
+
+
+pessoa* encontraMaisVelha(pessoa* p, int n){
+    pessoa* p_old = NULL;
+    int i;
+    p_old = p;
+    for(i=1;i<n;i++){
+        if(p[i].idade > p_old->idade)
+            p_old = (p+i);
+    }
+    return p_old;
+}
