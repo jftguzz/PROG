@@ -1,0 +1,43 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <ctype.h>
+
+int main(){
+
+   char frase[150];
+   char ch;
+   int repeticoes = 0, contador = 0;
+
+   fgets(frase,150,stdin);
+   scanf("%c", &ch);
+
+   for (contador = 0; contador<strlen(frase); contador++){
+       if (toupper(frase[contador]) == toupper(ch)){
+        repeticoes++;
+       }
+   }
+
+   printf("O caractere '%c' aparece %d vezes.", ch, repeticoes);
+   return 0;
+}
+
+/*
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+#include<ctype.h>
+
+int main(){
+    char frase[150], ch;
+    int i, n=0;
+    fgets(frase,150,stdin);
+    scanf("%c",&ch);
+    for(i=0;i<strlen(frase);i++){
+        if(toupper(frase[i])==toupper(ch)){
+            n++;
+        }
+    }
+    printf("O caractere '%c' aparece %d vezes.",ch,n);
+    return 0;
+}
