@@ -1,0 +1,27 @@
+#include<stdio.h>
+
+int main ()
+{
+    int vet[10] = {10, 34, 12, 1, -3, 3, -7, 9, 2, 4};
+    int numero_indeterminado;
+
+    while (1){
+        scanf("%d", &numero_indeterminado);
+        if (numero_indeterminado >= 0 && numero_indeterminado <= 9){
+            printf("%d\n", vet[numero_indeterminado]);
+        }
+        else {
+            break;
+        }
+    }
+
+    return 0;
+}
+
+/*
+    int i;
+    scanf("%d",&i);
+    while(i>=0 && i<10){
+        printf("%d\n",vet[i]);
+        scanf("%d",&i);
+    }
