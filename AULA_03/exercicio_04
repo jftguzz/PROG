@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main (){
+    int numero01, numero02, numero03;
+    printf("Digite os tres numeros: ");
+    scanf("%d %d %d", &numero01, &numero02, &numero03);
+
+    if (numero01>=numero02 && numero01>=numero03)
+        printf("%d", numero01);
+    else if (numero02>=numero01 && numero02>=numero03)
+        printf("%d", numero02);
+    else if (numero03>=numero01 && numero03>=numero02)
+        printf("%d", numero03);
+
+    return 0;
+}
