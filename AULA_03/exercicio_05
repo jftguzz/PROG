@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main (){
+    char caractere;
+    printf("Digite o caractere: ");
+    scanf("%c", &caractere);
+
+    if (caractere>='a' && caractere<='z')
+        printf("minusculo");
+    else if (caractere>='A' && caractere<='Z')
+        printf("MAIUSCULO");
+    else
+        printf("NA");
+
+    return 0;
+}
