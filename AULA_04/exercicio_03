@@ -1,0 +1,27 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+int main(){
+    char caractere;
+    int numero;
+
+    scanf("%c%c", &caractere);
+    scanf("%d", &numero);
+
+    for (int i=0; i<numero; i++)
+        printf("%c ", caractere);
+
+    return 0;
+}
+
+/*
+#include<stdio.h>
+
+int main(){
+    int n, i;
+    char ch;
+    scanf("%c %d",&ch, &n);
+    for(i=0;i<n;i++)
+        printf("%c ",ch);
+    return 0;
+}
