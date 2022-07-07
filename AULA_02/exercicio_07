@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main (){
+    float valor_premio, aposta01, aposta02, aposta03;
+    float ganho01, ganho02, ganho03, apostaTotal;
+    float parte01, parte02, parte03;
+        scanf("%f %f %f %f", &valor_premio, &aposta01, &aposta02, &aposta03);
+            apostaTotal = aposta01 + aposta02 + aposta03;
+
+            parte01 = aposta01/apostaTotal;
+            parte02 = aposta02/apostaTotal;
+            parte03 = aposta03/apostaTotal;
+
+            ganho01 = valor_premio * parte01;
+            ganho02 = valor_premio * parte02;
+            ganho03 = valor_premio * parte03;
+
+        printf("%.2f\n%.2f\n%.2f\n", ganho01, ganho02, ganho03);
+
+    return 0;
+}
