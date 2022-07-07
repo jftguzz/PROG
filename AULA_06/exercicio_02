@@ -1,0 +1,45 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+   char str[50];
+   int i, firstblood=0;
+
+   fgets(str,50,stdin);
+
+   for(i=0; i<50; i++){
+    if (str[i]>='0' && str[i]<='9'){
+        firstblood = ++i;
+        break;
+    }else if (str[i]=='\0') {
+        break;
+    }
+   }
+   printf("%d\n", firstblood);
+   return 0;
+}
+
+/*
+#include<stdio.h>
+#include<string.h>
+#include<ctype.h>
+
+int main(){
+
+    char str[50];
+    int firstDigit = 0, i = 0;
+
+    fgets(str,50,stdin);
+
+    while(str[i] != '\0' && firstDigit == 0){
+        if(str[i] >= '0' && str[i] <= '9'){
+            firstDigit = ++i;
+        }
+        i++;
+    }
+    printf("%d",firstDigit);
+    return 0;
+}
+
+*\
